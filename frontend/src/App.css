@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Neutral background */
+  }
+  
+  .graph-editor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff; /* White background for buttons */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    z-index: 10; /* Ensures buttons are above the graph */
+  }
+  
+  .graph-container {
+    flex-grow: 1;
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #e0e0e0; /* Neutral workspace background */
+    overflow: hidden; /* Prevents accidental scrollbars */
+    margin: 0; /* Ensures no extra spacing */
+    padding: 0; /* Ensures no extra spacing */
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  }
+  
+  button.active {
+    background-color: #45a049;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .node {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: move;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  }
+  
+  .node.selected {
+    background-color: orange;
+    transform: scale(1.1);
+  }
+  
+  .node:hover {
+    background-color: #45a049;
+  }
+  
+  .edge {
+    position: absolute;
+    background-color: #000;
+    height: 2px;
+    transform-origin: 0 0;
+  }
+  
